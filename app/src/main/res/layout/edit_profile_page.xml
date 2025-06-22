@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@null"/>
+
+    <TextView
+        android:id="@+id/edit_profile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="54dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Edit Profile"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textColor="#667EEA"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/edit_profile_title"
+        app:layout_constraintEnd_toStartOf="@id/save_icon"
+        android:layout_marginEnd="8dp"/>
+
+    <ImageView
+        android:id="@+id/save_icon"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src="@drawable/icons8_edit_account_64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit_profile_title"
+        app:layout_constraintBottom_toBottomOf="@id/edit_profile_title"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Save Profile"/>
+
+    <View
+        android:id="@+id/title_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#AAB8C2"
+        app:layout_constraintEnd_toEndOf="@id/save_icon"
+        app:layout_constraintStart_toStartOf="@id/edit_profile_title"
+        app:layout_constraintTop_toBottomOf="@id/edit_profile_title" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/profile_removebg_preview2"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_divider" />
+
+    <TextView
+        android:id="@+id/change_photo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Photo"
+        android:textColor="#667EEA"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        app:layout_constraintStart_toStartOf="@id/profile_image"
+        app:layout_constraintEnd_toEndOf="@id/profile_image"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/full_name_input"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_profile_input_bg"
+        android:hint="👤 Full Name"
+        android:inputType="textPersonName"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#0B1B2A"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/change_photo_button"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/email_input"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_profile_input_bg"
+        android:hint="📧 Email Address"
+        android:inputType="textEmailAddress"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#0B1B2A"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/full_name_input"
+        app:layout_constraintStart_toStartOf="@id/full_name_input"
+        app:layout_constraintTop_toBottomOf="@id/full_name_input"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/phone_input"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_profile_input_bg"
+        android:hint="📱 Phone Number"
+        android:inputType="phone"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#0B1B2A"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/email_input"
+        app:layout_constraintStart_toStartOf="@id/email_input"
+        app:layout_constraintTop_toBottomOf="@id/email_input"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/location_input"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_profile_input_bg"
+        android:hint="📍 Location"
+        android:inputType="textPostalAddress"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#0B1B2A"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/phone_input"
+        app:layout_constraintStart_toStartOf="@id/phone_input"
+        app:layout_constraintTop_toBottomOf="@id/phone_input"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/bio_input"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_profile_input_bg"
+        android:hint="📝 Bio (Optional)"
+        android:inputType="textMultiLine"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#0B1B2A"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/location_input"
+        app:layout_constraintStart_toStartOf="@id/location_input"
+        app:layout_constraintTop_toBottomOf="@id/location_input"
+        android:importantForAutofill="no" />
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

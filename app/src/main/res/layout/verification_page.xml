@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pic1"
+    android:fillViewport="true"
+    tools:context=".VerificationPageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="32dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:text="JobLink"
+            android:textColor="#333333"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:text="Enter Verification Code"
+            android:textColor="#333333"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subtitle"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="We've sent a 6-digit verification code to your email address. Please enter it below."
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/code_inputs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/verification_input_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:tag="code1"
+                android:hint="0"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/verification_input_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:tag="code2"
+                android:hint="0"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/verification_input_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:tag="code3"
+                android:hint="0"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/verification_input_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:tag="code4"
+                android:hint="0"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/verification_input_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:tag="code5"
+                android:hint="0"
+                tools:ignore="LabelFor" />
+
+            <EditText
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/verification_input_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:tag="code6"
+                android:hint="0"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/expires_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/code_inputs"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Code expires in 02:44"
+            android:textColor="#DC3545"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/verify_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/expires_text"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/verification_verify_button_bg"
+            android:text="Verify Code"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/resend_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/verify_button"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/verification_resend_button_bg"
+            android:text="Resend Code"
+            android:textAllCaps="false"
+            android:textColor="#667EEA" />
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resend_button"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="Didn't receive the code? Check your spam folder or"
+            android:textColor="#666666" />
+
+        <TextView
+            android:id="@+id/try_different_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="try a different"
+            android:textColor="#667EEA"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</ScrollView> 

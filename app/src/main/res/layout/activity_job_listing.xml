@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pic2">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/joblink_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="JobLink"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/settings_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="⚙️"
+        android:textColor="#333333"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@id/notification_bell_icon"
+        app:layout_constraintEnd_toStartOf="@id/notification_bell_icon"
+        app:layout_constraintTop_toTopOf="@id/notification_bell_icon"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/notification_bell_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="🔔"
+        android:textColor="#333333"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@id/joblink_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/joblink_title"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:id="@+id/header_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#333333"
+        app:layout_constraintEnd_toEndOf="@id/notification_bell_icon"
+        app:layout_constraintStart_toStartOf="@id/joblink_title"
+        app:layout_constraintTop_toBottomOf="@id/joblink_title" />
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/search_bar_background"
+        android:hint="🔍 Search jobs..."
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColorHint="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_divider" />
+
+    <!-- Job Listings -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp">
+
+            <!-- Job Card 1 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/job_card_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/job_card_background"
+                android:padding="13dp">
+
+                <TextView
+                    android:id="@+id/job_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Delivery Driver Needed"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/job_details_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif"
+                    android:text="📍 1.2 km away\n💰 Rs. 1,500/day\n⏰ Posted 2 hours ago"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/job_title_1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Job Card 2 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/job_card_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/job_card_background"
+                android:padding="13dp">
+
+                <TextView
+                    android:id="@+id/job_title_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Part-time Sales Assistant"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/job_details_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif"
+                    android:text="📍 2.5 km away\n💰 Rs. 800/day\n⏰ Posted 5 hours ago"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/job_title_2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Job Card 3 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/job_card_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/job_card_background"
+                android:padding="13dp">
+
+                <TextView
+                    android:id="@+id/job_title_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Event Helper - Weekend"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/job_details_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif"
+                    android:text="📍 3.1 km away\n💰 Rs. 2,000/day\n⏰ Posted 1 day ago"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/job_title_3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Job Card 4 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/job_card_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/job_card_background"
+                android:padding="13dp">
+
+                <TextView
+                    android:id="@+id/job_title_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Warehouse Assistant – Evening Shift"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/job_details_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif"
+                    android:text="📍 2.9 km away\n💰 Rs. 1,200/day\n⏰ Posted 2 days ago"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/job_title_4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Job Card 5 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/job_card_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/job_card_background"
+                android:padding="13dp">
+
+                <TextView
+                    android:id="@+id/job_title_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Barista – Part-time"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/job_details_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif"
+                    android:text="📍 1.8 km away\n💰 Rs. 950/day\n⏰ Posted 2 days ago"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/job_title_5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <include
+        android:id="@+id/bottom_navigation_container"
+        layout="@layout/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

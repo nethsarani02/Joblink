@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pic5"
+    tools:context=".VerificationStatusActivity">
+
+    <TextView
+        android:id="@+id/jobLinkTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="141dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="JobLink"
+        android:textColor="#245166"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:id="@+id/success_icon_container"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/jobLinkTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/verification_status_icon_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="✓"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/verification_status_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/success_icon_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Verification\nSuccessful!"
+        android:textAlignment="center"
+        android:textColor="#27AE60"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/verification_status_description"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verification_status_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif"
+        android:lineSpacingMultiplier="1.2"
+        android:text="Great! Your email has been verified successfully. You can now create a new password for your JobLink account."
+        android:textAlignment="center"
+        android:textColor="#616161"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/new_password_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verification_status_description"
+        android:layout_alignStart="@id/newPasswordEditText"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="New Password"
+        android:textColor="#2C3E50"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/newPasswordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/new_password_label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/verification_status_input_bg"
+        android:hint="Enter new password"
+        android:inputType="textPassword"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:textSize="15sp" />
+
+    <include
+        layout="@layout/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout> 

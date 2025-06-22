@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pic8"
+    android:fillViewport="true"
+    tools:context=".JobApplyPageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/apply_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Apply for Job"
+                android:textColor="#333333"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/cv_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/icons8_cv_64"
+                app:layout_constraintBottom_toBottomOf="@id/apply_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/apply_title" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/title_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#AAB8C2" />
+
+        <TextView
+            android:id="@+id/position_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Delivery Driver Position"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/cover_letter_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/apply_page_input_bg"
+            android:hint="✍️ Cover Letter (Optional)"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/interest_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/apply_page_input_bg"
+            android:hint="Why are you interested in this job?"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/start_date_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/apply_page_input_bg"
+            android:hint="📅 Available Start Date"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/contact_number_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/apply_page_input_bg"
+            android:hint="📱 Contact Number"
+            android:inputType="phone"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/email_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/apply_page_input_bg"
+            android:drawableStart="@drawable/mail"
+            android:drawablePadding="12dp"
+            android:hint="Email address"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp"
+            tools:ignore="RtlSymmetry" />
+
+
+        <LinearLayout
+            android:id="@+id/attach_resume_box"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/apply_page_dashed_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@android:drawable/ic_menu_upload"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:text="📎 Attach Resume\n(Optional)\nTap to Upload"
+                android:textColor="#5A7A97"
+                app:drawableTint="#5A7A97" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/confirm_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif"
+            android:text="I confirm all information is accurate"
+            android:textColor="#333333" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/send_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/apply_page_send_button_bg"
+            android:fontFamily="sans-serif-medium"
+            android:text="Send"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView> 

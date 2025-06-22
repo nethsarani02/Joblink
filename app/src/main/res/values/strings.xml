@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">JobLink</string>
+    <string name="create_account_icon">Create Account Icon</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">👤 Full Name</string>
+    <string name="email_address">📧 Email Address</string>
+    <string name="phone_number">📱 Phone Number</string>
+    <string name="password">🔒 Password</string>
+    <string name="confirm_password">🔒 Confirm Password</string>
+    <string name="terms_and_conditions">I agree to the Terms &amp; Conditions</string>
+    <string name="already_have_account">Already have an account? Sign In</string>
+</resources>

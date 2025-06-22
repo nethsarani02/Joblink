@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true"
+    tools:context=".JobDetailPageActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/bg_decor"
+            android:layout_width="113dp"
+            android:layout_height="251dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="524dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic31"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/job_details_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="63dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Job Details"
+            android:textColor="#333333"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/engineer_icon"
+            android:layout_width="35dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="47dp"
+            android:src="@drawable/icons8_engineer_641"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="101dp"
+            android:layout_marginEnd="14dp"
+            android:background="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="18dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/job_detail_card_bg"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/job_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Delivery Driver Needed"
+                    android:textColor="#333333"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/job_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif"
+                    android:text="📍 1.2 km away"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="@id/job_title"
+                    app:layout_constraintTop_toBottomOf="@id/job_title" />
+
+                <TextView
+                    android:id="@+id/job_salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="sans-serif"
+                    android:text="💰 Rs. 1,500/day"
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@id/job_distance"
+                    app:layout_constraintStart_toEndOf="@id/job_distance"
+                    app:layout_constraintTop_toTopOf="@id/job_distance" />
+
+                <LinearLayout
+                    android:id="@+id/requirements_box"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="19dp"
+                    android:background="@drawable/job_detail_requirements_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/job_distance">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:src="@drawable/icons8_checked_checkbox_501" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:text="Job Requirements:\n• Must have your own vehicle (bike or scooter preferred).\n• Must possess a valid driving license.\n• Should be punctual, courteous, and customer-friendly.\n• Ability to navigate using a mobile map app.\n• Must be familiar with the local area to ensure quick deliveries."
+                            android:textColor="#000000"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/icons8_pin_261" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:text="If you are interested, navigate to the &quot;Location on the map&quot; link shown in the job post, or visit Rajesh Food Corner directly. Be ready with your license and vehicle details."
+                            android:textColor="#000000"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp" />
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/delivery_man_img"
+                        android:layout_width="159dp"
+                        android:layout_height="125dp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/shipping_fast_delivery_man_riding_600nw_11450009421" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="📅 Duration: 1 day 🕐 Time: 9:00 AM - 6:00 PM \n👤 Posted by: Rajesh Food Corner"
+                        android:textColor="#0B1B2A"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="sans-serif"
+                        android:text="⭐⭐⭐⭐⭐ (4.8)"
+                        android:textColor="#6D5613"
+                        android:textSize="7sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/location_on_map_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="62dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="68dp"
+            android:background="@drawable/job_detail_location_btn_bg"
+            android:drawableStart="@drawable/icons8_map_641"
+            android:drawablePadding="8dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:text="Location on Map"
+            android:textAllCaps="false"
+            android:textColor="#666666"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card"
+            tools:ignore="RtlSymmetry" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="47dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_on_map_btn">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/message_btn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/job_detail_message_btn_bg"
+                android:fontFamily="sans-serif-medium"
+                android:text="Message"
+                android:textAllCaps="false"
+                android:textColor="#0B1B2A"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/apply_now_btn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/job_detail_apply_btn_bg"
+                android:fontFamily="sans-serif-medium"
+                android:text="Apply Now"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <include
+            layout="@layout/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView> 

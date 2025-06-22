@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatPageActivity">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/avatar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/chat_avatar_bg"
+            android:gravity="center"
+            android:text="R"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/avatar"
+            android:text="Rajesh Food Corner"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/online_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name"
+            android:layout_alignStart="@id/user_name"
+            android:text="● Online"
+            android:textColor="#333333"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/header_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#E0E0E0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_layout" />
+
+    <include
+        android:id="@+id/bottom_navigation_bar"
+        layout="@layout/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Input Area -->
+    <RelativeLayout
+        android:id="@+id/input_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A1C5E1"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_bar">
+
+        <EditText
+            android:id="@+id/message_input"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_toStartOf="@id/send_button_container"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/chat_input_field_bg"
+            android:hint="Type a message..."
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="#112A35"
+            android:textSize="12sp"
+            android:inputType="text"
+            tools:ignore="RtlSymmetry" />
+
+        <FrameLayout
+            android:id="@+id/send_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <View
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/chat_send_button_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="➤"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/input_area"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_divider">
+
+        <LinearLayout
+            android:id="@+id/chat_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Incoming Message -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/chat_bubble_incoming_bg"
+                android:padding="16dp"
+                android:text="Hi! I saw your application for the delivery driver position. Are you available to start tomorrow?"
+                android:textColor="#000000"
+                android:textSize="11sp"/>
+
+            <!-- Outgoing Message -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/chat_bubble_outgoing_bg"
+                android:padding="16dp"
+                android:text="Yes, I'm available! What time should I come in?"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"/>
+
+            <!-- Incoming Message -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/chat_bubble_incoming_bg"
+                android:padding="16dp"
+                android:text="Great! Can you come at 9 AM? We're located at 123 Main Street."
+                android:textColor="#000000"
+                android:textSize="11sp"/>
+
+            <!-- Outgoing Message -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/chat_bubble_outgoing_bg"
+                android:padding="16dp"
+                android:text="Perfect! I'll be there at 9 AM sharp. Do I need to bring anything?"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"/>
+
+            <!-- Incoming Message -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/chat_bubble_incoming_bg"
+                android:padding="16dp"
+                android:text="Just bring your driving license and we'll provide the rest. Looking forward to working with you!"
+                android:textColor="#000000"
+                android:textSize="11sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout> 
